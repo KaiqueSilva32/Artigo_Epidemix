@@ -1,0 +1,85 @@
+%%%% fatec-article.tex, 2024/03/10
+
+%% Classe de documento
+\documentclass[
+  a4paper,%% Tamanho de papel: a4paper, letterpaper (^), etc.
+  12pt,%% Tamanho de fonte: 10pt (^), 11pt, 12pt, etc.
+  english,%% Idioma secundário (penúltimo) (>)
+  brazilian,%% Idioma primário (último) (>)
+]{article}
+
+%% Pacotes utilizados
+\usepackage[]{fatec-article}
+\usepackage{float}
+\usepackage{ragged2e}
+\Author{1}{Name={LEANDRO.E \\ PINTO.K \\ MIURA.L}}
+\Author{2}{Name={\{ eric.leandro@fatec.sp.gov.br \} \\ \{ kaique.silva58@fatec.sp.gov.br \}\\ \{ lucas.miura@fatec.sp.gov.br \} \\}}
+
+%% Definição das palavras-chaves/keywords
+\Keyword{1}{Dengue}{Dengue}
+\Keyword{2}{Mapa de calor}{HeatMap}
+\Keyword{3}{Tempo real}{Real time}
+\Keyword{4}{Brasil}{Brazil}
+
+%%%% Resumo no idioma primário (brazilian)
+\begin{Abstract}[brazilian]%% Idioma (brazilian ou english)
+  O estudo visa desenvolver uma alternativa para contribuir com os Objetivos de Desenvolvimento Sustentável (ODS) da ONU, especialmente a meta relacionada à saúde e bem-estar. O Brasil tem enfrentado epidemias de dengue, resultando em um número elevado de óbitos, com dados disponíveis em gráficos e mapas na internet, mas atualizados apenas periodicamente. Para ajudar a combater a dengue antes que a situação se agrave, o estudo propõe um sistema que identifica áreas de risco no Brasil. Esse sistema fornecerá dados em tempo real por meio de um HeatMap, permitindo que supervisores organizem equipes de dedetização nas regiões afetadas conforme a gravidade da situação. A proposta busca uma abordagem proativa e eficaz no combate à dengue e na preservação da saúde pública.
+\end{Abstract}
+
+%%%% Resumo no idioma secundário (english)
+\begin{Abstract}[english]%% Idioma (brazilian ou english)
+  The study aims to develop an alternative to contribute to the United Nations' Sustainable Development Goals (SDGs), particularly the goal related to health and well-being. Brazil has faced dengue epidemics, resulting in a high number of deaths, with data available in graphs and maps on the internet, but updated only periodically. To help combat dengue before the situation worsens, the study proposes a system that identifies risk areas in Brazil. This system will provide real-time data through a HeatMap, allowing supervisors to organize pest control teams in affected regions according to the severity of the situation. The proposal seeks a proactive and effective approach to combating dengue and preserving public health.
+\end{Abstract}
+
+%% Processamento de entradas (itens) do índice remissivo (makeindex)
+\makeindex%
+
+%% Arquivo(s) de referências
+\addbibresource{fatec-article.bib}
+
+%% Início do documento
+\begin{document}
+
+% Seções e subseções
+%\section{Título de Seção Primária}%
+
+%\subsection{Título de Seção Secundária}%
+
+%\subsubsection{Título de Seção Terciária}%
+
+%\paragraph{Título de seção quaternária}%
+
+%\subparagraph{Título de seção quinária}%
+
+\section*{Introdução}%
+\label{sect:intro}
+\input{Topicos/introducao}
+
+\section*{OBJETIVO} \label{sect:obj}
+
+\input{Topicos/objetivo}
+
+ \section*{ESTADO DA ARTE} \label{sect:estadoarte}
+
+ \input{Topicos/estadodaarte}
+
+ \section*{METODOLOGIA} \label{sect:metodologia}
+
+ \input{Topicos/metodologia}
+
+ \section*{RESULTADOS PRELIMINARES}\label{sect:resultados}
+
+ \input{Topicos/resultados}
+
+ \section*{CONCLUSÃO}\label{sect:conclusao}
+
+ \input{Topicos/conclusao}
+
+\printbibliography
+
+%% Elementos pós-textuais (opcionais): Apêndice e Anexo
+%Caso for utilizar, basta retirar o símbolo de % na frente do comando
+%\input{./Extras/post-textual}
+
+%% Fim do documento
+\end{document}
